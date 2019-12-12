@@ -1,0 +1,7 @@
+# pip requirements file
+notebook==5.*
+xarray==0.14.1
+cfgrib==0.9.7.3
+ecmwf-api-client==1.5.4
+# for python3.8 matplotlib 3.1.1 is not working and 3.2 not yet available
+matplotlib==3.2.0rc1

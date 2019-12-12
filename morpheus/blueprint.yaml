@@ -1,0 +1,88 @@
+tiers:
+  App:
+    linkedTiers: []
+    tierIndex: 1
+    instances:
+      - instance:
+          name: Jupyterhub
+          type: ubuntu-ewc
+        environments:
+          Dev:
+            groups:
+              default:
+                clouds:
+                  ecmwf-dwd-wv:
+                    backup:
+                      veeamManagedServer: ''
+                      createBackup: false
+                      jobAction: new
+                      jobRetentionCount: 3
+                      enabled: true
+                      showScheduledBackupWarning: false
+                    instance:
+                      layout:
+                        code: acd1faac-e62d-4921-a114-5e378181ed51
+                        id: 1213
+                      name: 'jupyterhub-{sequence}'
+                      description: ''
+                      allowExisting: false
+                      type: ubuntu-ewc
+                      userGroup:
+                        id: ''
+                    networkInterfaces:
+                      - ipMode: ''
+                        primaryInterface: true
+                        showNetworkPoolLabel: false
+                        showNetworkDhcpLabel: true
+                        network:
+                          idName: public
+                          id: network-53
+                          hasPool: false
+                      - ipMode: ''
+                        primaryInterface: false
+                        showNetworkPoolLabel: false
+                        showNetworkDhcpLabel: true
+                        row: 0
+                        network:
+                          idName: data
+                          id: network-62
+                          hasPool: false
+                    workflow:
+                      taskSetId: 18
+                    loadBalancer: []
+                    volumes:
+                      - vId: 994
+                        size: 20
+                        maxIOPS: null
+                        name: root
+                        rootVolume: true
+                        storageType: 4
+                        minStorage: 21474836480
+                        maxStorage: 21474836480
+                    lock:
+                      config:
+                        securityGroup: true
+                        availabilityZone: true
+                    config:
+                      createUser: true
+                      securityGroup: DWD-allowAll
+                      availabilityZone: nova
+                    plan:
+                      code: openstack.flavor.9.55cc8f2e-8f84-4142-add2-b9e2ca5cac23
+                      id: 498
+                    group:
+                      id: 7
+                    lockedFields:
+                      - instance.layout.id
+                      - config.securityGroup
+                      - workflow.taskSetId
+                      - networks
+                      - config.availabilityZone
+name: Jupyterhub on Ubuntu
+description: 'Jupyterhub with ecCodes, Magics and Polytope'
+type: morpheus
+category: app
+config:
+  isVpcSelectable: true
+  isEC2: false
+image: /assets/apps/template.png

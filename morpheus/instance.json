@@ -1,0 +1,60 @@
+{
+    "zoneId": 9,
+    "instance": {
+      "name": "jupyterhub-000",
+      "cloud": "ecmwf-dwd-wv",
+      "site": {
+        "id": 7
+      },
+      "type": "ubuntu-ewc",
+      "instanceType": {
+        "code": "ubuntu-ewc"
+      },
+      "description": "Jupyterhub on Ubuntu",
+      "instanceContext": "dev",
+      "layout": {
+        "id": 1213
+      },
+      "plan": {
+        "id": 498,
+        "code": "openstack.flavor.9.55cc8f2e-8f84-4142-add2-b9e2ca5cac23",
+        "name": "2cpu-4gbmem-20gbdisk"
+      }
+    },
+    "plan": {
+      "id": 498,
+      "code": "openstack.flavor.9.55cc8f2e-8f84-4142-add2-b9e2ca5cac23",
+      "name": "2cpu-4gbmem-20gbdisk"
+    },
+    "volumes": [
+      {
+        "id": -1,
+        "rootVolume": true,
+        "name": "root",
+        "size": 20,
+        "sizeId": null,
+        "storageType": 4,
+        "datastoreId": null
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "network": {
+          "id": "network-53"
+        }
+      },
+      {
+        "network": {
+          "id": "network-62"
+        }
+      }
+    ],
+    "config": {
+      "noAgent": "off",
+      "availabilityZone": "nova",
+      "securityGroup": "DWD-allowAll",
+      "serverGroup": null,
+      "osExternalNetworkId": "",
+      "createUser": true
+    }
+  }
