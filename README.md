@@ -1,5 +1,5 @@
-# morpheus-jupyterhub
-Jupyterhub running on the European Weather Cloud
+# Jupyterhub on the European Weather Cloud
+VM with Jupyterhub running on the European Weather Cloud.
 
 # Installation instructions
 You need ``make``and [morpheus-cli](https://github.com/gomorpheus/morpheus-cli) to run the scripts provided. Alternatively you can use the docker image ``eduardrosert/morpheus-mgmt`` to run the scripts.
